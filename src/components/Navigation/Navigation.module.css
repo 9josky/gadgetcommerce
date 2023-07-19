@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #2a2a72;
+    text-decoration: none;
+    
+}
+
+.secondaryContainer > ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    
+    list-style: none;
+}
+
+.secondaryContainer > ul > li > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.lowerContainer {
+    padding-right: 10px;
+}
+
+.lowerContainer:hover {
+    color: aqua;
+}

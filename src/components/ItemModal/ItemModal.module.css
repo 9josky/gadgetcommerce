@@ -1,0 +1,38 @@
+.container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* column-gap: 0; */
+    padding: 20px 0;
+
+    max-width: 66.666667%;
+
+    background-color: #f3f3f3;
+    line-height: 0rem;
+}
+
+.footer {
+    display: flex;
+    gap: 20px;
+}
+
+@media(min-width: 768px) {
+    .modal {
+        /* flex: 0 0 50%; */
+        max-width: 50%;
+    } 
+}

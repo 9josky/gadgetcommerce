@@ -1,0 +1,9 @@
+button {
+    cursor: pointer;
+}
+
+.iconText {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}

@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    align-items: center;
+    /* margin: 0 auto; */
+    padding: 15px;
+    width: 400px;
+    gap: 20px;
+}
+
+.imgContainer > img {
+    width: 100px;
+    height: 100px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.delete:hover {
+    cursor: pointer;
+}
+
+@media(min-width: 600px) {
+    .container {
+        margin: 0 auto;
+        width: 500px;
+        gap: 30px;
+    }
+}
+
+@media(min-width: 768px) {
+    .container {
+        margin: 0 auto;
+        width: 700px;
+        gap: 30px;
+    }
+}
+
+@media(min-width: 992px) {
+    .flexItem {
+        flex: 0 0 30%;
+        max-width: 30%;
+    } 
+}
