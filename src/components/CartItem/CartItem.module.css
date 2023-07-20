@@ -21,6 +21,19 @@
     cursor: pointer;
 }
 
+.cartitems {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.value {
+    font-style: italic;
+}
+
 @media(min-width: 600px) {
     .container {
         margin: 0 auto;

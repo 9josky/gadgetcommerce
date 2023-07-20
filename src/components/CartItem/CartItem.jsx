@@ -12,8 +12,14 @@ function CartItem({ image, title, price, count, total, id }) {
       <div className={styles.imgContainer}>
         <img src={image} alt={title} />
       </div>
-      <div>Product: {title}</div>
-      <div>Price: ${price}</div>
+      <div className={styles.cartitems}>
+        <div className={styles.title}>Product:</div>
+        <div className={styles.value}>{title}</div>
+      </div>
+      <div className={styles.cartitems}>
+        <div className={styles.title}>Price:</div>
+        <div className={styles.value}>${price}</div>
+      </div>
       <div className={styles.buttonContainer}>
         <button
           onClick={() => {
@@ -41,7 +47,10 @@ function CartItem({ image, title, price, count, total, id }) {
       >
         <MdOutlineDeleteForever size={32} className={styles.delete} />
       </div>
-      <div>Item Total: {total}</div>
+      <div className={styles.cartitems}>
+        <div className={styles.title}>Item Total:</div>
+        <div className={styles.value}>${total}</div>
+      </div>
     </div>
   );
 }
