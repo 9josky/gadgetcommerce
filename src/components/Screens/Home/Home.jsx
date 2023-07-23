@@ -8,7 +8,6 @@ import styles from "./Home.module.css";
 
 function Home() {
   const store = useContext(GlobalContext);
-  console.log(store);
   return (
     <>
       <div className={styles.container}>
@@ -16,7 +15,7 @@ function Home() {
           <div className={styles.minicontainer}>
             <ItemCard
               className={styles.flexItem}
-              key={product.id}
+              //key={product.id}
               to={`/details/${product.id}`}
               image={product.img}
               itemName={product.title}
