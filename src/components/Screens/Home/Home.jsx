@@ -15,7 +15,7 @@ function Home() {
           <p
             style={{
               fontWeight: "bold",
-              fontSize: "50px",
+              fontSize: "30px",
               color: "#2a2a72",
               fontFamily: "fantasy",
             }}
@@ -28,7 +28,7 @@ function Home() {
             <div className={styles.minicontainer}>
               <ItemCard
                 className={styles.flexItem}
-                //key={product.id}
+                itemkey={product.id}
                 to={`/details/${product.id}`}
                 image={product.img}
                 itemName={product.title}

@@ -7,8 +7,9 @@ function Details() {
   const { id } = useParams();
   const store = useContext(GlobalContext);
   console.log(store, "id");
-  const gadgetDetails = store.Products.find((info) => info.id === id);
-  console.log(gadgetDetails, "gadgetDetails");
+  const gadgetDetails = store.Products.find((info) => info.id == id);
+  const test = store.Products;
+  console.log(test, "gadgetDetails");
   if (!gadgetDetails) {
     return <p>No Gadget Detail Availabe....</p>;
   }

@@ -6,7 +6,7 @@ import { GlobalContext } from "../../context";
 
 import styles from "./ItemCard.module.css";
 
-function ItemCard({ image, itemName, price, to, id }) {
+function ItemCard({ image, itemName, price, to, id, itemkey }) {
   const store = useContext(GlobalContext);
   const cartItem = store.cartItems;
   console.log(store, "store");
@@ -22,7 +22,7 @@ function ItemCard({ image, itemName, price, to, id }) {
     <>
       <div className={styles.container}>
         <div className={styles.imgContainer}>
-          <Link to={to}>
+          <Link key={itemkey} to={to}>
             <img className={styles.imgCard} src={image} alt="" />
           </Link>
 
