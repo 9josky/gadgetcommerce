@@ -37,6 +37,7 @@ function ItemModal({ title, img, price }) {
                 text="Go To Cart"
                 color="#009ffd"
                 border="2px solid #009ffd"
+                width="150px"
               />
             </div>
           </Link>

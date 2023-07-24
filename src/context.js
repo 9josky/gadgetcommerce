@@ -11,6 +11,8 @@ const GlobalContext = React.createContext()
   const [cartItems, setCartItems] = useState(localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : [])
   const Products = [...storeProducts]
 
+
+
   const Helper = (productId) => {
     console.log(productId, 'product')
     const gadgetPreview = Products.find((info) => info.id === productId);
@@ -22,7 +24,13 @@ const GlobalContext = React.createContext()
 
     const items = [...cartItems,gadgetPreview]
     localStorage.setItem("cartItems", JSON.stringify(items))
-}
+
+    updateCart()
+    }
+
+    const updateCart = () => {
+        setCartItems(JSON.parse(localStorage.getItem("cartItems")))
+    }
 
 const increament = (productId) => {
     const exist = cartItems.find((item) => item.id === productId)

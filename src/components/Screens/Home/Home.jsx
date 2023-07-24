@@ -10,21 +10,36 @@ function Home() {
   const store = useContext(GlobalContext);
   return (
     <>
-      <div className={styles.container}>
-        {store.Products.map((product) => (
-          <div className={styles.minicontainer}>
-            <ItemCard
-              className={styles.flexItem}
-              //key={product.id}
-              to={`/details/${product.id}`}
-              image={product.img}
-              itemName={product.title}
-              price={product.price}
-              id={product.id}
-            />
-          </div>
-        ))}
+      <div className={styles.topContainer}>
+        <div clasName={styles.products}>
+          <p
+            style={{
+              fontWeight: "bold",
+              fontSize: "50px",
+              color: "#2a2a72",
+              fontFamily: "fantasy",
+            }}
+          >
+            Our Products{" "}
+          </p>
+        </div>
+        <div className={styles.container}>
+          {store.Products.map((product) => (
+            <div className={styles.minicontainer}>
+              <ItemCard
+                className={styles.flexItem}
+                //key={product.id}
+                to={`/details/${product.id}`}
+                image={product.img}
+                itemName={product.title}
+                price={product.price}
+                id={product.id}
+              />
+            </div>
+          ))}
+        </div>
       </div>
+
       <div>
         {store.show ? (
           <ItemModal

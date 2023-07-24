@@ -27,7 +27,7 @@ function Cart() {
             price={item.price}
             count={item.count}
             total={item.total}
-            key={item.id}
+            // key={item.id}
             id={item.id}
           />
         </div>

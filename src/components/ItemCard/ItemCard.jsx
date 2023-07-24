@@ -8,16 +8,21 @@ import styles from "./ItemCard.module.css";
 
 function ItemCard({ image, itemName, price, to, id }) {
   const store = useContext(GlobalContext);
+  const cartItem = store.cartItems;
   console.log(store, "store");
-  const cartItems = JSON.parse(localStorage.getItem("cartItems"));
-  const exist = cartItems.find((item) => item.id === id);
+  console.log(cartItem, "cartItem");
+  // const cartItem = JSON.parse(localStorage.getItem("cartItems"));
+
+  // if (cartItems.length > 0) {
+  const exist = cartItem.find((item) => item.id === id);
+
   // localStorage.setItem("cartItems", JSON.stringify(cartItems));
   // console.log(helper, "func");
   return (
     <>
       <div className={styles.container}>
         <div className={styles.imgContainer}>
-          <Link  to={to}>
+          <Link to={to}>
             <img className={styles.imgCard} src={image} alt="" />
           </Link>
 
